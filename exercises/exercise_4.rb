@@ -12,6 +12,15 @@ whistler = Store.create(name: 'Whistler', annual_revenue: 1900000, mens_apparel:
 yaletown = Store.create(name: 'Yaletown', annual_revenue: 430000, mens_apparel: true, womens_apparel: true)
 
 @mens_stores = Store.where(mens_apparel: true)
+puts "--- Mens Stores ---"
 for store in @mens_stores
   puts "Name: #{store.name} Annual Revenue: #{store.annual_revenue}"
+end
+
+@womens_apparel = Store.where(womens_apparel: true)
+puts "--- Womens Stores ---"
+for store in @womens_apparel
+  if store.annual_revenue < 1000000
+    puts "Name: #{store.name} Annual Revenue: #{store.annual_revenue}"
+  end
 end
