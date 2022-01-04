@@ -11,4 +11,4 @@ puts "----------"
 @store1.save
 
 @store2 = Store.find_by(id = @store2)
-@store2.update(name: 'SunnyBoi')
+@store2.update(name: 'Richmond Hill')
